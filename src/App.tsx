@@ -1,9 +1,12 @@
-import React from 'react'
+import { Subscribe } from "@react-rxjs/core";
+import React from "react";
+import { TextInput, CharacterCount } from "./TextInput";
 
-type Props = {}
-
-export default function App({}: Props) {
+export default function App() {
   return (
-    <div>App</div>
-  )
+    <Subscribe>
+      <TextInput />
+      <CharacterCount />
+    </Subscribe>
+  );
 }
